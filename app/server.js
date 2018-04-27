@@ -18,8 +18,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Different modules needed for API routes and HTML routes
-// require('./app/routing/apiRoutes.js')(app); 
-// require('./app/routing/htmlRoutes.js')(app);
+require('routes/apiRoutes.js')(app); 
+require('routes/htmlRoutes.js')(app);
 
 // Initializes the server to begin listening for requests
 app.listen(PORT, function() {
