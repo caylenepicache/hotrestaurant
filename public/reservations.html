@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Friend Finder | Home</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   <script src="https://code.jquery.com/jquery.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+ 
+</head>
+<body>
+    <div class="container">
+        <!--jumbotron-->
+            <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-4">Hot Restaurant</h1>
+                        <p class="lead">Make your reservation</p>
+                        <hr class="my-4">
+                       
+                        <a class="btn btn-primary btn-lg" href="/tables" role="button">View Tables</a>
+                        <a class="btn btn-primary btn-lg" href="/home" role="button">Home</a>
+
+                    </div>
+                  </div>
+
+          <!--FORM BEGINS-->        
+          <form>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="name" class="form-control" id="name" placeholder="Enter name">
+                </div>
+
+                <div class="form-group">
+                  <label for="Phone Number">Phone Number</label>
+                  <input type="phoneNumber" class="form-control" id="phoneNumber" placeholder="867-5309">
+                </div>
+
+                <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="emailInput" class="form-control" id="emailInput" placeholder="your@email.com">
+                      </div>
+
+                      <div class="form-group">
+                            <label for="uniqueId">Unique ID</label>
+                            <input type="uniqueId" class="form-control" id="uniqueId" placeholder="12345">
+                          </div>
+
+                <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+              </form>
+             </body>
+
+             <!--Start the JS-->
+             <script type="text/javascript">
+                $(document).ready(function() {
+                    $("#submit").on("click", function(event) { 
+                        event.preventDefault();  
+                        var name =$("#name").val()
+                        var email =$("#phoneNumber").val()
+                        var phone =$("#emailInput").val()
+                        var id =$("#uniqueId").val()
+                        var newParty = {
+                        name: $("#nameInput").val(),
+                        phone: $("#phoneNumber").val(),
+                        email: $("#emailInput").val(),
+                        uniqueId: $("#uniqueId").val(),
+                    };
+                        console.log(newParty)
+                       
+
+                        // $.post("/api/friends", newCharacter)
+                        // .then( function(data) {
+                        //       console.log("survey.html", data)
+                        //       alert("Adding character...")
+                        //     });
+                        
+                    })});
+                
+                </script>                    
+</html>
+             
